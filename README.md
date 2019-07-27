@@ -2,7 +2,7 @@
 
 
 
-# Go配置
+# 🕐Go配置
 
 ## Go的安装
 
@@ -84,7 +84,7 @@ projectpath(GOPATH)
 
 
 
-# Beego框架安装
+# 🕑Beego框架安装
 
 以项目中`example`为例，新建`example`目录，将此目录配置到`GOPATH`环境变量下
 
@@ -108,7 +108,7 @@ projectpath(GOPATH)
 
 然后你就会发现在`example`目录下自动生成了`bin`、`pkg`和`src`三个文件夹，这就说明beego安装成功，如果没有生成，检查一下是不是`GOPATH`没有将该项目放在第一位。
 
-# 新建Beego项目
+# 🕒新建Beego项目
 
 
 
