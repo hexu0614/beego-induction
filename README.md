@@ -77,7 +77,7 @@ set PKG_CONFIG=pkg-config
 projectpath(GOPATH)
   |-- bin // golang编译可执行文件存放路径
   |-- pkg // golang编译包时，生成的.a文件存放路径
-  └-- src // 源码路径。按照golang默认约定，go run，go install等命令的当前工作路径（即在 此路径下执行上述命令）。
+  └-- src // 源码路径，这里是存放所有go项目代码的地方。按照golang默认约定，go run，go install等命令的当前工作路径（即在 此路径下执行上述命令）。
 ```
 
 <br />
@@ -137,4 +137,44 @@ projectpath(GOPATH)
 然后在浏览器中输入`127.0.0.1:8080`你就能看到beego的欢迎页了
 
 ![1564200626287](https://github.com/hexu0614/beego-induction/blob/master/img_resources/1564200626287.png)
+
+### 项目目录🍳
+
+观察`mybeego`项目下生成的文件，这些文件是在执行`bee run`时生成的，每个文件作用如下：
+
+```
+conf           文件夹中放的是项目的配置文件
+controllers    文件夹存放主要的业务逻辑模块
+modules        文件夹存放主要的数据库业务模块
+routers        路由文件夹存放【不同的请求，查找不同的内容】
+static         文件夹存放静态资源，例如css，js，img等（通常不和数据库打交道的部分）
+tests          文件夹存放测试文件，开发一般不动这个
+view           文件夹存放视图显示html文件
+mybeego.exe    这是bee run编译出来的.a文件
+main.go        程序主入口文件
+```
+
+<br />
+
+<br />
+
+# Beego hello world🕓
+
+### 新建hello world项目🍞
+
+回到example文件，再次使用`bee new hello_world`命令创建hello world项目
+
+这时在`src`文件夹下就有`mybeego`和`hello_world`两个项目了
+
+```
+projectpath(GOPATH)
+  |-- bin 
+  |-- pkg
+  └-- src
+  		|-- github.com  # 安装beego时生成
+  		|-- hello_world
+  		└-- mybeego
+```
+
+
 
