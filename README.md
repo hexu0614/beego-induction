@@ -132,9 +132,9 @@ projectpath(GOPATH)
 
 进入项目目录，也就是刚才创建的`src`下的mybeego文件夹下，文件夹下应有个名为`main.go`的文件，这就是beego的启动文件，当前目录执行指令`bee run`。此时终端会打印日志并提示服务器已经开启。
 
-![1564200542750](C:\Users\hexu0\AppData\Roaming\Typora\typora-user-images\1564200542750.png)
+![1564200542750](https://github.com/hexu0614/beego-induction/blob/master/img_resources/20190727120813.png)
 
 然后在浏览器中输入`127.0.0.1:8080`你就能看到beego的欢迎页了
 
-![1564200626287](E:\workspace\beego-induction\img_resources\1564200626287.png)
+![1564200626287](https://github.com/hexu0614/beego-induction/blob/master/img_resources/1564200626287.png)
 
