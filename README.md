@@ -8,6 +8,14 @@
 
 win下：[Golang官网](https://golang.google.cn/) ，可能需要翻墙。
 
+然后狂点下一步就ok了，默认安在c盘根目录
+
+
+
+## Go编译器推荐
+
+推荐使用jetbrains家的Goland，[下载地址](https://www.jetbrains.com/go/)
+
 
 
 ## 三种环境变量的配置：
