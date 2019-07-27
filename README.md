@@ -2,9 +2,9 @@
 
 
 
-# 🕐Go配置
+# Go配置🕐
 
-## Go的安装
+### Go的安装🍕
 
 win下：[Golang官网](https://golang.google.cn/) ，可能需要翻墙。
 
@@ -12,13 +12,13 @@ win下：[Golang官网](https://golang.google.cn/) ，可能需要翻墙。
 
 
 
-## Go编译器推荐
+### Go编译器推荐🍔
 
 推荐使用jetbrains家的Goland，[下载地址](https://www.jetbrains.com/go/)
 
 
 
-## 三种环境变量的配置：
+### 三种环境变量的配置🍟
 
 可以通过`go env`来查看go环境
 
@@ -54,21 +54,21 @@ set PKG_CONFIG=pkg-config
 
 
 
-### `$GOROOT`
+#### `$GOROOT`
 
 `go`的安装路径
 当你安装好`go`之后其实这个就已经有了
 
 
 
-### `$path`
+#### `$path`
 
 将`go`安装目录下的bin文件夹配置在path中
 ![](https://github.com/hexu0614/beego-induction/blob/master/img_resources/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20190727114148.png)
 
 
 
-### `$GOPATH`
+#### `$GOPATH`
 
 `GOPATH`：也就是项目所在目录。允许多个目录，当有多个目录时，请注意分隔符（win下为`;`）
 `GOPATH`目录约定有三个子目录：
@@ -84,23 +84,23 @@ projectpath(GOPATH)
 
 
 
-# 🕑Beego框架安装
+# Beego框架安装🕑
 
 以项目中`example`为例，新建`example`目录，将此目录配置到`GOPATH`环境变量下
 
 `GOPATH=E:\workspace\beego-induction\example\;`
 
-### 进入项目目录
+### 进入项目目录🌭
 
 `cd E:\workspace\beego-induction\example\`：
 
-### 框架源码下载
+### 框架源码下载🥓
 
 其中-u是检查版本并下载，-v是显示下载过程。
 
 执行指令`go get -u -v github.com/astaxie/beego`
 
-### 框架工具包下载
+### 框架工具包下载🍿
 
 执行指令`go get -u -v github.com/beego/bee`
 
@@ -108,7 +108,7 @@ projectpath(GOPATH)
 
 然后你就会发现在`example`目录下自动生成了`bin`、`pkg`和`src`三个文件夹，这就说明beego安装成功，如果没有生成，检查一下是不是`GOPATH`没有将该项目放在第一位。
 
-# 🕒新建Beego项目
+# 新建Beego项目🕒
 
 
 
