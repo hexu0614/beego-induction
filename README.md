@@ -56,6 +56,7 @@ set PKG_CONFIG=pkg-config
 ### `$path`
 
 将`go`安装目录下的bin文件夹配置在path中
+![]()
 
 
 
@@ -107,7 +108,7 @@ projectpath(GOPATH)
 例如：`bee new mybeego`
 这条指令会在`GOPATH`路径下的`src`文件夹中创建go环境的初始配置。这里说明下虽然这条指令在根目录下执行指令也没啥问题，beego会自动寻找`GOPATH`去创建工程项目。但是我们最好在终端中先进入`GOPATH`再创建，这是考虑到可能会路径出错之类的问题
 
-![1564198395069](C:\Users\hexu0\AppData\Roaming\Typora\typora-user-images\1564198395069.png)
+![]()
 
 看到上面的输出后，表示项目创建完成。
 
