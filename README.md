@@ -224,7 +224,7 @@ projectpath(GOPATH)
 
 1. ###### 新增controller文件
 
-   在beego中，对不同的url进行的post和get必须独立到单个文件夹，参照default.go我们来写个hwcontroller.go。
+   在beego中，出于代码规范，对不同的url进行的post和get需要独立到单个文件，参照default.go我们来写个hwcontroller.go。
 
    ```
    package controllers
@@ -260,4 +260,68 @@ projectpath(GOPATH)
 通过`bee run`命令启动后，访问`http://127.0.0.1:8080`,依然是beego的欢迎页，接下来访问`http://127.0.0.1:8080/hello_world`，我们写的Hello world页面就出现啦
 
 ![1564216506355](https://github.com/hexu0614/beego-induction/blob/master/img_resources/1564216506355.png)
+
+
+
+# 前后端分离（json处理）🕔
+
+对于大多是项目，都是采用的前后端分离的方法，前端通过ajax发送各种请求，而后端只需要返回给前端json就可以了。json一般采用如下格式`{'code':'','msg':'','date':''}`
+
+
+
+那beego如何返回json呢？
+
+首先前后端分离，那就不需要在管我们的数据传输给那个前端，安心做个api就可以，所以首先需要在 conf文件夹下的`app.conf`中关闭模板渲染
+
+`autorender = false`
+
+<br>
+
+### 定义json🥨
+
+在`hwcontroller.go`文件中定义json的字段和类型
+
+```
+type JSONStruct struct {
+	Code int
+	Msg  string
+	Data string
+}
+```
+
+### 添加json值🥖
+
+```
+//  不再需要前端页面，所以注释掉
+//func (hw *HWController) Get() {      // get请求
+//	hw.TplName = "hello world.html"  // 关联静态文件
+//}
+
+
+func (hw *HWController) Get() {      // get请求
+	json := &JSONStruct{0, "Success", "hello json"}  #添加json数据
+	hw.Data["json"] = json 
+	hw.ServeJSON() 
+	return
+}
+```
+
+### 启动服务🧀
+
+然后启动服务访问`http://127.0.0.1:8080/hello_world`，这下就返回json数据了~
+
+![1564220403819](E:\workspace\beego-induction\img_resources\1564220403819.png)
+
+还有一种方法，当json数据很少的时候，可以直接生成json而不用定义json type
+
+```
+func (c *LoginController) Get() {
+       c.Data["json"] = map[string]interface{}{"code":"0","msg":"Success"}
+       c.ServeJSON()
+       c.StopRun()
+       return
+}
+```
+
+
 
