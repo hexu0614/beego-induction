@@ -56,7 +56,7 @@ set PKG_CONFIG=pkg-config
 ### `$path`
 
 将`go`安装目录下的bin文件夹配置在path中
-![]()
+![](https://github.com/hexu0614/beego-induction/blob/master/img_resources/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20190727114148.png)
 
 
 
@@ -108,7 +108,7 @@ projectpath(GOPATH)
 例如：`bee new mybeego`
 这条指令会在`GOPATH`路径下的`src`文件夹中创建go环境的初始配置。这里说明下虽然这条指令在根目录下执行指令也没啥问题，beego会自动寻找`GOPATH`去创建工程项目。但是我们最好在终端中先进入`GOPATH`再创建，这是考虑到可能会路径出错之类的问题
 
-![]()
+![](https://github.com/hexu0614/beego-induction/blob/master/img_resources/1564198395069.png)
 
 看到上面的输出后，表示项目创建完成。
 
