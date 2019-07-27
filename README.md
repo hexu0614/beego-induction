@@ -9,7 +9,7 @@
                  ->【去V层渲染视图】->【返回c层】->【返回给用户视图】
 如图所示：
 
-![1564213263981](E:\workspace\beego-induction\img_resources\1564213263981.png)
+![1564213263981](https://github.com/hexu0614/beego-induction/blob/master/img_resources/1564213263981.png)
 
 
 
@@ -257,5 +257,5 @@ projectpath(GOPATH)
 
 通过`bee run`命令启动后，访问`http://127.0.0.1:8080`,依然是beego的欢迎页，接下来访问`http://127.0.0.1:8080/hello_world`，我们写的Hello world页面就出现啦
 
-![1564216506355](E:\workspace\beego-induction\img_resources\1564216506355.png)
+![1564216506355](https://github.com/hexu0614/beego-induction/blob/master/img_resources/1564216506355.png)
 
