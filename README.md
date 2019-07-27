@@ -80,7 +80,9 @@ projectpath(GOPATH)
   └-- src // 源码路径。按照golang默认约定，go run，go install等命令的当前工作路径（即在 此路径下执行上述命令）。
 ```
 
+<br />
 
+<br />
 
 
 
@@ -108,9 +110,13 @@ projectpath(GOPATH)
 
 然后你就会发现在`example`目录下自动生成了`bin`、`pkg`和`src`三个文件夹，这就说明beego安装成功，如果没有生成，检查一下是不是`GOPATH`没有将该项目放在第一位。
 
+<br />
+
+<br />
+
 # 新建Beego项目🕒
 
-
+### 创建🥚
 
 执行指令` bee new 项目名称`
 例如：`bee new mybeego`
@@ -118,7 +124,17 @@ projectpath(GOPATH)
 
 ![](https://github.com/hexu0614/beego-induction/blob/master/img_resources/1564198395069.png)
 
-看到上面的输出后，表示项目创建完成。
+看到上面的输出后，表示项目创建完成，然后你就可以在`src`文件夹下看到你的项目目录了。
 
 
+
+### 运行🥞
+
+进入项目目录，也就是刚才创建的`src`下的mybeego文件夹下，文件夹下应有个名为`main.go`的文件，这就是beego的启动文件，当前目录执行指令`bee run`。此时终端会打印日志并提示服务器已经开启。
+
+![1564200542750](C:\Users\hexu0\AppData\Roaming\Typora\typora-user-images\1564200542750.png)
+
+然后在浏览器中输入`127.0.0.1:8080`你就能看到beego的欢迎页了
+
+![1564200626287](E:\workspace\beego-induction\img_resources\1564200626287.png)
 
