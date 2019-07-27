@@ -12,6 +12,8 @@
 ![1564213263981](https://github.com/hexu0614/beego-induction/blob/master/img_resources/1564213263981.png)
 
 
+<br />
+<br />
 
 # Go配置🕐
 
