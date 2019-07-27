@@ -4,9 +4,7 @@
 
 与python的Django和Flask一致，Beego采用了非常经典的传统MVC架构设计模式，即
 
-       【用户请求】->【c层控制器截获，并分析需求】->【去M层获取数据】->【返回c层】->
-    
-                 ->【去V层渲染视图】->【返回c层】->【返回给用户视图】
+       【用户请求】->【c层控制器截获，并分析需求】->【去M层获取数据】->【返回c层】->【去V层渲染视图】->【返回c层】->【返回给用户视图】
 如图所示：
 
 ![1564213263981](https://github.com/hexu0614/beego-induction/blob/master/img_resources/1564213263981.png)
@@ -310,7 +308,7 @@ func (hw *HWController) Get() {      // get请求
 
 然后启动服务访问`http://127.0.0.1:8080/hello_world`，这下就返回json数据了~
 
-![1564220403819](E:\workspace\beego-induction\img_resources\1564220403819.png)
+![1564220403819](https://github.com/hexu0614/beego-induction/blob/master/img_resources/1564220403819.png)
 
 还有一种方法，当json数据很少的时候，可以直接生成json而不用定义json type
 
