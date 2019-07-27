@@ -2,6 +2,17 @@
 
 
 
+与python的Django和Flask一致，Beego采用了非常经典的传统MVC架构设计模式，即
+
+       【用户请求】->【c层控制器截获，并分析需求】->【去M层获取数据】->【返回c层】->
+    
+                 ->【去V层渲染视图】->【返回c层】->【返回给用户视图】
+如图所示：
+
+![1564213263981](E:\workspace\beego-induction\img_resources\1564213263981.png)
+
+
+
 # Go配置🕐
 
 ### Go的安装🍕
@@ -177,4 +188,74 @@ projectpath(GOPATH)
 ```
 
 
+
+### 前端页面编写与配置🥐
+
+随便写个首页,命名 hello world.html
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html, body {
+            height: 100%;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+<h1 style="color: deeppink">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HELLO WORLD <br> 小宋专享版beego教程</h1>
+</body>
+</html>
+```
+
+将此静态文件放在hello_world项目文件下的view目录下，你会在该目录下看到一个名为index.tpl的文件，这就是刚才启动项目时显示的页面。是beego支持的另一种格式的html，可以不使用。
+
+#### 配置
+
+1. ###### 新增controller文件
+
+   在beego中，对不同的url进行的post和get必须独立到单个文件夹，参照default.go我们来写个hwcontroller.go。
+
+   ```
+   package controllers
+   
+   import "github.com/astaxie/beego"
+   
+   type HWController struct {     
+   	beego.Controller
+   }
+   
+   func (hw *HWController) Get() {      // get请求
+   	hw.TplName = "hello world.html"  // 关联到刚创建的静态文件
+   }
+   ```
+
+   
+
+2. ###### 增加HWController的路由
+
+   通过controller文件，我们将逻辑与页面进行了关联，接下来就是需要让路由指向HWController
+
+   routers文件夹下的router.go文件就是用来进行路由关联的，添加新路由：
+
+   ```
+   func init() {
+       beego.Router("/", &controllers.MainController{})
+       beego.Router("/hello_world", &controllers.HWController{})  // 新路由
+   }
+   ```
+
+### 启动项目🥐
+
+通过`bee run`命令启动后，访问`http://127.0.0.1:8080`,依然是beego的欢迎页，接下来访问`http://127.0.0.1:8080/hello_world`，我们写的Hello world页面就出现啦
+
+![1564216506355](E:\workspace\beego-induction\img_resources\1564216506355.png)
 
